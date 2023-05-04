@@ -1,0 +1,22 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Bungee';
+  font-size: 24px;
+  margin: em;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed
+}
+
+.tweeter-title {
+  padding: 1.5em;
+}
+
+.create-tweeter {
+  padding: 1.5em;
+  font-family: 'Source Sans Pro'
+}
