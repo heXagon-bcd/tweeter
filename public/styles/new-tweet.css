@@ -1,0 +1,58 @@
+/* section container */
+.new-tweet {
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+}
+
+.bottom-border {
+  border-bottom: solid;
+  margin-bottom: 11px;
+}
+
+/* what are you humming about container */
+#new-tweet-compose {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 11px;
+}
+
+#tweet-input-text {
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+}
+
+#humming {
+  margin-bottom: 10px;
+}
+
+/* tweet container */
+.tweet-btn-ctn {
+  font-family: 'Bungee';
+  display: flex;
+  justify-content: space-between; 
+  flex-direction: row;
+}
+
+.tweet-btn {
+}
+
+.tweet-count {
+}
+
+#tweet-text {
+  background-color: transparent;
+  border: none;
+  font-size: 0.75em;
+  padding: 0;
+  height: 1.2em;
+  width: 100%;
+  rows: 1;
+  resize: none;
+}
+
+#tweet{
+  background-color: #3D5A80 ;
+  color: white;
+}
