@@ -1,7 +1,7 @@
 /* section container */
 .new-tweet {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 11%;
+  margin-right: 11%;
   justify-content: center;
 }
 
@@ -11,6 +11,9 @@
 }
 
 /* what are you humming about container */
+.new-tweet-container {
+  margin-bottom: 50px;
+}
 #new-tweet-compose {
   display: flex;
   flex-direction: column;
@@ -46,9 +49,11 @@
   border: none;
   font-size: 0.75em;
   padding: 0;
-  height: 1.2em;
+  min-height: 1.2em;
+  max-height: 5.0em;
   width: 100%;
-  rows: 1;
+  overflow-y: auto;
+  /* rows: 1; */
   resize: none;
 }
 
