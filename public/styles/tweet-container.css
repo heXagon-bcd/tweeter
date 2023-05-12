@@ -5,7 +5,7 @@
   padding: 1%;
   margin-left: 10%;
   margin-right: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   box-shadow: 0 1px 2px #293241;
   transition: box-shadow 0.3s ease-in-out;
  
@@ -22,6 +22,11 @@
 
 #tweet-image {
   width: 4%;
+  padding-right: 5px;
+  color: darkgray
+}
+#tweet-image-2 {
+  width: 25px;
   padding-right: 5px;
   color: darkgray
 }
