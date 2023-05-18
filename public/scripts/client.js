@@ -4,17 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function() {
-
-  const createTweetElement = function(db) {
-    const date = new Date(db.created_at)
+$(document).ready(function () {
+  const createTweetElement = function (db) {
+    const date = new Date(db.created_at);
     // const now = new Date();
     // const dateDiff = Math.abs(now - date)
     // const dateDiffDays = Math.floor(dateDiff/(1000*60*60*24))
     // console.log("datediff", dateDiff)
-    const dateDiffDays = timeago.format(date)
-  
-  
+    const dateDiffDays = timeago.format(date);
+
     const $tweeter = $(`      
     <div class="tweet-container">
     <div class="tweet-user">
@@ -27,7 +25,7 @@ $(document).ready(function() {
     </div>
     <div class="bottom-border"></div>
       <div id="tweet-container-footer">
-          <div id="post-time"> ${dateDiffDays} Days Ago</div>    
+          <div id="post-time"> ${dateDiffDays}</div>    
             <div class="icons">
               <div class ="subicon">
                 <i class="fa-solid fa-flag fa-2xs"></i>
@@ -42,34 +40,31 @@ $(document).ready(function() {
           </div>
       </div> 
     </div>     
-  </div>`
-  );
-  $('.prepend').prepend($tweeter);
-  }
-  
-  const renderTweets = function(tweets) {
+  </div>`);
+    $(".prepend").prepend($tweeter);
+  };
+
+  const renderTweets = function (tweets) {
     // loops through tweets
-    for(let key in tweets) {
-    createTweetElement(tweets[key])
+    for (let key in tweets) {
+      createTweetElement(tweets[key]);
     }
-  }
-    
-    // takes return value and appends it to the tweets container
+  };
 
-  const loadTweets = function() {
-    console.log("Loading tweeets...")
-    $.ajax('/tweets', {method:'GET'})
-      .then(function(moreData) {
-        console.log('Success', moreData);
-        renderTweets(moreData);
-      });
-    };
+  // takes return value and appends it to the tweets container
 
-  
+  const loadTweets = function () {
+    console.log("Loading tweeets...");
+    $.ajax("/tweets", { method: "GET" }).then(function (moreData) {
+      console.log("Success", moreData);
+      renderTweets(moreData);
+    });
+  };
+
   //function to capture submit event
-  
-  $('#tweet-form').on("submit", function(event) {
-    $('#error-container').empty();
+
+  $("#tweet-form").on("submit", function (event) {
+    $("#error-container").empty();
     const $error = $(`
       <div style="border: 5px solid red; margin-bottom: 30px; color: red; " class="error-popup">You are at or have exceeded your character limit! Please rewrite your message</div>
     `);
@@ -80,32 +75,32 @@ $(document).ready(function() {
     const text = $(this).serialize();
     console.log(this);
     if (text.length >= 145) {
-      $("#error-container").append($error)
+      $("#error-container").append($error);
     } else if (text.length === 5) {
-      $("#error-container").append($error2)
-    }
-      else {
-  //post request
-    $.ajax({
-      type: "POST",
-      url: "/tweets",
-      data: text,
-      success: function() {
-        $.ajax('/tweets', {method:'GET'})
-          .then(function(moreData) {
-            console.log('Success', moreData);
-            const latestTweet = moreData[moreData.length -1]; // Assuming the latest tweet is the first one
+      $("#error-container").append($error2);
+    } else {
+      //post request
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: text,
+        success: function () {
+          $.ajax("/tweets", { method: "GET" }).then(function (moreData) {
+            console.log("Success", moreData);
+            const latestTweet = moreData[moreData.length - 1]; // Assuming the latest tweet is the first one
             createTweetElement(latestTweet);
           });
-      },
-    });
-  }
-    });
+        },
+      });
+    }
+  });
 
-//load tweets wtihout needing to press intial submit
-renderTweets(() => {$.ajax('/tweets', {method:'GET'})})
-$(document).ready(function() {
-  loadTweets()
-});
-//ennd
+  //load tweets wtihout needing to press intial submit
+  renderTweets(() => {
+    $.ajax("/tweets", { method: "GET" });
+  });
+  $(document).ready(function () {
+    loadTweets();
+  });
+  //ennd
 });

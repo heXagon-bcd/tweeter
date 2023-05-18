@@ -1,9 +1,14 @@
 /* section container */
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: center;
+}
 .new-tweet {
-  display:flex;
-  margin-left: 11%;
-  margin-right: 11%;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  margin-top: 5%;
 }
 
 .bottom-border {
@@ -85,8 +90,7 @@
 
   .new-tweet {
     display:flex;
-    margin-top: 10em;
-    margin-left: 11%;
+    margin-top: 9em;
     flex-grow:1;
     /* margin-right: 11%; */
     /* justi
