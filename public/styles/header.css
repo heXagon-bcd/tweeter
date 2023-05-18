@@ -19,3 +19,22 @@ header {
   margin-bottom: 0px;
   margin-top: 0px;
 }
+
+
+@media only screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EE6C4D;
+    height: 400px;
+    width: 40%;
+    color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+    margin-top: 10em;
+    margin-left: 4em;
+  }
+
+
+}

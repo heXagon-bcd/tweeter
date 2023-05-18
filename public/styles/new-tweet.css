@@ -1,11 +1,13 @@
 /* section container */
 .new-tweet {
+  display:flex;
   margin-left: 11%;
   margin-right: 11%;
-  justify-content: center;
+  flex-grow: 1;
 }
 
 .bottom-border {
+  width: auto;
   border-bottom: solid;
   margin-bottom: 11px;
 }
@@ -13,11 +15,13 @@
 /* what are you humming about container */
 .new-tweet-container {
   margin-bottom: 50px;
+  margin-top: 5%;
+  width: 100%;
 }
 #new-tweet-compose {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   margin-bottom: 11px;
 }
 
@@ -66,4 +70,30 @@
   display: flex;
   justify-content: center;
   border: 5px red;
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    display:flex;
+    flex-direction: row;
+
+  }
+  .container{
+    flex-grow:1;
+  }
+
+  .new-tweet {
+    display:flex;
+    margin-top: 10em;
+    margin-left: 11%;
+    flex-grow:1;
+    /* margin-right: 11%; */
+    /* justi
+    fy-content: flex-end; */
+  }
+  #new-tweet-compose {
+    display: flex;
+    flex-grow: 1;
+  } 
 }
