@@ -6,33 +6,6 @@
 
 $(document).ready(function() {
 
-  // const tweetData = [
-  //     {
-  //       "user": {
-  //         "name": "Newton",
-  //         "avatars": "https://i.imgur.com/73hZDYK.png"
-  //         ,
-  //         "handle": "@SirIsaac"
-  //       },
-  //       "content": {
-  //         "text": "If I have seen further it is by standing on the shoulders of giants"
-  //       },
-  //       "created_at": 1461116232227
-  //     },
-  //     {
-  //       "user": {
-  //         "name": "Descartes",
-  //         "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //         "handle": "@rd" },
-  //       "content": {
-  //         "text": "Je pense , donc je suis"
-  //       },
-  //       "created_at": 1461113959088
-  //     }
-  //   ]
-  
-  //   console.log(tweetData[0].user.name)
-  
   const createTweetElement = function(db) {
     const date = new Date(db.created_at)
     // const now = new Date();
@@ -71,7 +44,7 @@ $(document).ready(function() {
     </div>     
   </div>`
   );
-  $('.container').append($tweeter);
+  $('.prepend').prepend($tweeter);
   }
   
   const renderTweets = function(tweets) {
@@ -82,7 +55,6 @@ $(document).ready(function() {
   }
     
     // takes return value and appends it to the tweets container
-  // }
 
   const loadTweets = function() {
     console.log("Loading tweeets...")
@@ -97,24 +69,40 @@ $(document).ready(function() {
   //function to capture submit event
   
   $('#tweet-form').on("submit", function(event) {
+    $('#error-container').empty();
+    const $error = $(`
+      <div style="border: 5px solid red; margin-bottom: 30px; color: red; " class="error-popup">You are at or have exceeded your character limit! Please rewrite your message</div>
+    `);
+    const $error2 = $(`
+      <div style="border: 5px solid red; margin-bottom: 30px; color: red; " class="error-popup">You cant submit an empty tweet.  Please write a message!</div>
+    `);
     event.preventDefault();
     const text = $(this).serialize();
-  
+    console.log(this);
+    if (text.length >= 145) {
+      $("#error-container").append($error)
+    } else if (text.length === 5) {
+      $("#error-container").append($error2)
+    }
+      else {
   //post request
     $.ajax({
       type: "POST",
       url: "/tweets",
       data: text,
-      // success: success,
+      success: function() {
+        $.ajax('/tweets', {method:'GET'})
+          .then(function(moreData) {
+            console.log('Success', moreData);
+            const latestTweet = moreData[moreData.length -1]; // Assuming the latest tweet is the first one
+            createTweetElement(latestTweet);
+          });
+      },
     });
-    $.ajax('/tweets', {method:'GET'})
-      .then(function(moreData) {
-        console.log('Success', moreData);
-        const latestTweet = moreData[moreData.length -1]; // Assuming the latest tweet is the first one
-        createTweetElement(latestTweet);
-      });
-  });
+  }
+    });
 
+//load tweets wtihout needing to press intial submit
 renderTweets(() => {$.ajax('/tweets', {method:'GET'})})
 $(document).ready(function() {
   loadTweets()
