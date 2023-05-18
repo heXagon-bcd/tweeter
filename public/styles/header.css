@@ -3,7 +3,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #EE6C4D;
+  background-color: #ee6c4d;
   height: 400px;
   width: 100%;
   color: white;
@@ -11,15 +11,10 @@ header {
   margin-top: 120px;
 }
 
-.image {
-
-}
-
 .name h2 {
   margin-bottom: 0px;
   margin-top: 0px;
 }
-
 
 @media only screen and (min-width: 1024px) {
   header {
@@ -27,7 +22,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #EE6C4D;
+    background-color: #ee6c4d;
     height: 400px;
     width: 40%;
     color: white;
@@ -35,6 +30,4 @@ header {
     margin-top: 10em;
     margin-left: 4em;
   }
-
-
 }

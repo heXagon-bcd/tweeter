@@ -7,12 +7,7 @@
 $(document).ready(function () {
   const createTweetElement = function (db) {
     const date = new Date(db.created_at);
-    // const now = new Date();
-    // const dateDiff = Math.abs(now - date)
-    // const dateDiffDays = Math.floor(dateDiff/(1000*60*60*24))
-    // console.log("datediff", dateDiff)
     const dateDiffDays = timeago.format(date);
-
     const $tweeter = $(`      
     <div class="tweet-container">
     <div class="tweet-user">
@@ -79,7 +74,6 @@ $(document).ready(function () {
     } else if (text.length === 5) {
       $("#error-container").append($error2);
     } else {
-      //post request
       $.ajax({
         type: "POST",
         url: "/tweets",
@@ -87,7 +81,7 @@ $(document).ready(function () {
         success: function () {
           $.ajax("/tweets", { method: "GET" }).then(function (moreData) {
             console.log("Success", moreData);
-            const latestTweet = moreData[moreData.length - 1]; // Assuming the latest tweet is the first one
+            const latestTweet = moreData[moreData.length - 1];
             createTweetElement(latestTweet);
           });
         },
@@ -102,5 +96,6 @@ $(document).ready(function () {
   $(document).ready(function () {
     loadTweets();
   });
-  //ennd
+
+//end
 });

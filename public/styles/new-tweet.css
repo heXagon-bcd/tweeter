@@ -4,14 +4,14 @@
   margin-right: 5%;
   justify-content: center;
 }
-.new-tweet {
+.container > .new-tweet {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   margin-top: 5%;
 }
 
-.bottom-border {
+.container > .bottom-border {
   width: auto;
   border-bottom: solid;
   margin-bottom: 11px;
@@ -23,37 +23,26 @@
   margin-top: 5%;
   width: 100%;
 }
-#new-tweet-compose {
+.new-tweet-container > #new-tweet-compose {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   margin-bottom: 11px;
 }
 
-#tweet-input-text {
+.new-tweet-container > #tweet-input-text {
   font-family: 'Source Sans Pro';
   font-weight: bold;
 }
 
-#humming {
-  margin-bottom: 10px;
-}
-
 /* tweet container */
-.tweet-btn-ctn {
+.new-tweet-container > .tweet-btn-ctn {
   font-family: 'Bungee';
   display: flex;
   justify-content: space-between; 
   flex-direction: row;
 }
 
-.tweet-btn {
-}
-
-.tweet-count {
-}
-
-#tweet-text {
+.new-tweet-container > #tweet-text {
   background-color: transparent;
   border: none;
   font-size: 0.75em;
@@ -66,16 +55,9 @@
   resize: none;
 }
 
-#tweet{
+.new-tweet-container > #tweet{
   background-color: #3D5A80 ;
   color: white;
-}
-
-#error-popup {
-  display: flex;
-  justify-content: center;
-  border: 5px red;
-
 }
 
 @media only screen and (min-width: 1024px) {
@@ -88,15 +70,12 @@
     flex-grow:1;
   }
 
-  .new-tweet {
+  .container > .new-tweet {
     display:flex;
     margin-top: 9em;
     flex-grow:1;
-    /* margin-right: 11%; */
-    /* justi
-    fy-content: flex-end; */
   }
-  #new-tweet-compose {
+  .container > #new-tweet-compose {
     display: flex;
     flex-grow: 1;
   } 
