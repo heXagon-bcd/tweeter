@@ -12,10 +12,6 @@ By adopting a dynamic single-page approach, the project not only enhances usabil
 
 Overall, the project focuses on creating a user-friendly and visually appealing web page for businesses to use for tweeting and sharing content.
 
-## Screenshots
-!["Screenshot of Desktop View"](https://github.com/heXagon-bcd/tweeter/blob/master/docs/desktop-view.png)
-!["Screenshot of Mobile View"](https://github.com/heXagon-bcd/tweeter/blob/master/docs/mobile-view.png)
-
 ## Getting Started
 
 1. [Create](https://github.com/heXagon-bcd/tweeter) a new repository using this repository as a template.
@@ -31,3 +27,9 @@ Overall, the project focuses on creating a user-friendly and visually appealing 
 - Body-parser
 - Chance
 - md5
+
+## Screenshots
+### Desktop View
+!["Screenshot of Desktop View"](https://github.com/heXagon-bcd/tweeter/blob/master/docs/desktop-view.png)
+### Mobile View
+!["Screenshot of Mobile View"](https://github.com/heXagon-bcd/tweeter/blob/master/docs/mobile-view.png)
