@@ -2,11 +2,19 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+The project involves creating a professional web page called "Tweeter - Home Page" for business purposes. The web page has a navigation bar at the top, a header section with a profile picture and name, and a main content area where users can write and view tweets.
+
+The design of the page is clean and organized, with the content centered and visually appealing. Users can compose new tweets in a dedicated section that adjusts nicely to different screen sizes. The tweet input and buttons are styled to look attractive and user-friendly.
+
+Through the use of JavaScript and AJAX techniques, the web page dynamically updates its content without requiring a full page reload. This results in a seamless and responsive user experience, as users can interact with various elements on the page, such as composing tweets or viewing updated content, without experiencing any disruptive transitions or delays.
+
+By adopting a dynamic single-page approach, the project not only enhances usability but also optimizes performance, allowing users to navigate and engage with the web page efficiently and effortlessly.
+
+Overall, the project focuses on creating a user-friendly and visually appealing web page for businesses to use for tweeting and sharing content.
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
+1. [Create](https://github.com/heXagon-bcd/tweeter) a new repository using this repository as a template.
 2. Clone your repository onto your local device.
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
@@ -16,3 +24,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+- md5
