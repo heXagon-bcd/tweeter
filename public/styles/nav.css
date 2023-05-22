@@ -3,7 +3,7 @@
   top: 0;
   height: 120px;
   width: 100%;
-  background-color: #3D5A80;
+  background-color: #EE6C4D;
   color: #FFFFFF;
   font-family: 'Bungee';
   font-size: 24px;
@@ -17,6 +17,30 @@
 }
 
 .nav > .create-tweeter {
+  display: flex;
   padding: 1.5em;
-  font-family: 'Source Sans Pro'
+  font-family: 'Source Sans Pro';
+  flex-direction: column;
+}
+
+#arrow {
+  margin-top: .4em;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    height: 120px;
+    width: 100%;
+    background-color: #3D5A80;
+    color: #FFFFFF;
+    font-family: 'Bungee';
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }

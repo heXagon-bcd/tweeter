@@ -80,6 +80,9 @@ $(document).ready(function () {
             console.log("Success", moreData);
             const latestTweet = moreData[moreData.length - 1];
             createTweetElement(latestTweet);
+
+            $("#tweet-text").val('');
+            $("#counter").text(0);
           });
         },
       });
