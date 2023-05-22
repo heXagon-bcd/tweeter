@@ -40,14 +40,12 @@ $(document).ready(function () {
   };
 
   const renderTweets = function (tweets) {
-    // loops through tweets
     for (let key in tweets) {
       createTweetElement(tweets[key]);
     }
   };
 
-  // takes return value and appends it to the tweets container
-
+  //function to return value and appends it to the tweets container
   const loadTweets = function () {
     console.log("Loading tweeets...");
     $.ajax("/tweets", { method: "GET" }).then(function (moreData) {
@@ -57,7 +55,6 @@ $(document).ready(function () {
   };
 
   //function to capture submit event
-
   $("#tweet-form").on("submit", function (event) {
     $("#error-container").empty();
     const $error = $(`

@@ -1,94 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Font Info -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <!-- Font Info -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Meta Information -->
+      <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+      <!-- External CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css"/>
-  
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/31fa1e0b89.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- App CSS -->
+      <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+      <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+      <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+      <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+      <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css"/>
+    
+      <!-- External JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://kit.fontawesome.com/31fa1e0b89.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
-  <!-- disable viewport zooming -->
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-  
-  <body>
-    <div class="main">
-    <!-- Top nav bar (fixed) -->
-    <div class="nav">
-    <nav>
-      <div class="tweeter-title">
-        <span>tweeter</span>
-      </div>
-      <div class="create-tweeter">
-        <span><b>Write</b> a new tweet</span>
-      </div>
-    </nav>
-  </div>
-
-  <header class="header">
-    <div class="image">
-        <img src="/images/profile-hex.png"> 
-    </div>
-    <br>
-    <div class="name">
-        <h2>Shawn He</h2>
-    </div>
-</header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div id="h2-div">
-          <div id="error-container"></div>
+      <!-- App JS -->
+      <script type="text/javascript" src="/scripts/client.js"></script>
+      <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    </head>
+    <!-- disable viewport zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    
+    <body>
+      <div class="main">
+      <!-- Top nav bar (fixed) -->
+      <nav class="nav">
+        <div class="tweeter-title">
+          <span>tweeter</span>
         </div>
+        <div class="create-tweeter">
+          <span><b>Write</b> a new tweet</span>
+        </div>
+      </nav>
+      
+    <header class="header">
+      <div class="image">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div class="name">
+          <h2>Shawn He</h2>
+      </div>
+  </header>
 
-      <div class="new-tweet-container">
-        <div id="new-tweet-compose">
-            <div id="new-tweet-1">
-              <label id="tweet-input-text" for="tweet-text">What are you humming about?</label>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div id="h2-div">
+            <div id="error-container"></div>
+          </div>
+
+        <div class="new-tweet-container">
+          <div id="new-tweet-compose">
+              <div id="new-tweet-1">
+                <label id="tweet-input-text" for="tweet-text">What are you humming about?</label>
+              </div>
+              <form id="tweet-form">
+              <div id="new-tweet-2">
+                <textarea name="text" id="tweet-text" maxlength="240"></textarea>
+              </div>
             </div>
-            <form id="tweet-form">
-            <div id="new-tweet-2">
-              <textarea name="text" id="tweet-text" maxlength="240"></textarea>
+            <div class="bottom-border"></div>
+            <div class="tweet-btn-ctn">
+              <div class="tweet-btn">
+                <button id="tweet" type="submit">Tweet</button>
+              </form>
+              </div>
+              <div class="tweet-count">
+              <output id="counter" class="counter" for="tweet-text">0</output>
             </div>
           </div>
-          <div class="bottom-border"></div>
-          <div class="tweet-btn-ctn">
-            <div class="tweet-btn">
-              <button id="tweet" type="submit">Tweet</button>
-            </form>
-            </div>
-            <div class="tweet-count">
-            <output id="counter" class="counter" for="tweet-text">0</output>
-          </div>
         </div>
-      </div>
-    </section>
-   <!-- tweet container -->
-    <section class ="prepend"></section>
-    </main>
-  </div>
-  </body>
-</html>
+      </section>
+    <!-- tweet container -->
+      <section class ="prepend"></section>
+      </main>
+    </div>
+    </body>
+  </html>
 
 

@@ -4,17 +4,18 @@
   margin-right: 5%;
   justify-content: center;
 }
-.container > .new-tweet {
+.new-tweet {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   margin-top: 5%;
 }
 
-.container > .bottom-border {
+.bottom-border {
   width: auto;
   border-bottom: solid;
   margin-bottom: 11px;
+  border-width: 3px;
 }
 
 /* what are you humming about container */
@@ -42,7 +43,7 @@
   flex-direction: row;
 }
 
-.new-tweet-container > #tweet-text {
+#tweet-text {
   background-color: transparent;
   border: none;
   font-size: 0.75em;
@@ -55,7 +56,7 @@
   resize: none;
 }
 
-.new-tweet-container > #tweet{
+#tweet{
   background-color: #3D5A80 ;
   color: white;
 }
